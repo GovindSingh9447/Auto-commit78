@@ -3,22 +3,22 @@ name: "Run"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/1 * * * *"
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
       with:
         persist-credentials: false
         fetch-depth: 0 
     - name: Commit & Push changes
-      uses: actions-js/push@master
+      uses: actions-js/push@main
       with:
         github_token: ${{ secrets.GH_TOKEN }}
         empty: true
         message: "Auto Commit"
         author_email: "govindkrsingh0605@gmail.com"
         author_name: "Govind Singh"
-        branch: "master"
+        branch: "main"
