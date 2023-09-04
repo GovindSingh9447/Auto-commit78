@@ -21,4 +21,4 @@ jobs:
         message: "Auto Commit"
         author_email: "govindkrsingh0605@gmail.com"
         author_name: "Govind Singh"
-        branch: "master"
+        branch: "main"
